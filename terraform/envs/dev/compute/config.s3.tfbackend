@@ -1,0 +1,7 @@
+#  Terraform S3 state backend configuration
+bucket         = "darkenv-tfstate-files"
+key            = "envs/dev/compute/terraform.tfstate"
+region         = "us-east-1"
+encrypt        = true
+kms_key_id     = "alias/master"
+dynamodb_table = "darkenv-tfstate-lock"
