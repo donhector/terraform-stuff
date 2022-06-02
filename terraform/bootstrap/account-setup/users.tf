@@ -5,7 +5,7 @@ locals {
       groups : [aws_iam_group.readonly_group.name, aws_iam_group.admin_group.name]
     },
     {
-      name : "CI",
+      name : "svcacct-ci",
       groups : [aws_iam_group.admin_group.name]
     }
   ]

@@ -1,3 +1,3 @@
 # Compute
 
-Terraform module to privision AWS Ubuntu 20.04 ami
+Terraform module to privision an AWS Ubuntu 22.04 ami

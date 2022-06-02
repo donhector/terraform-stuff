@@ -6,15 +6,15 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 3.73.0"
+      version = "~> 4.16.0"
     }
     tls = {
       source  = "hashicorp/tls"
-      version = "3.1.0"
+      version = "~> 3.1.0"
     }
     local = {
       source  = "hashicorp/local"
-      version = "2.1.0"
+      version = "~> 2.1.0"
     }
   }
 
@@ -28,15 +28,12 @@ provider "local" {}
 provider "tls" {}
 
 provider "aws" {
-  region = var.aws_region
-  # profile = "default"
+  region     = var.aws_region
   access_key = var.aws_access_key
   secret_key = var.aws_secret_key
+  # profile = "default"
   default_tags {
-    tags = {
-      Owner   = "Hector"
-      Creator = "Terraform"
-    }
+    tags = var.default_tags
   }
 }
 

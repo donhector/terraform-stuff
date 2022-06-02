@@ -1,11 +1,8 @@
 ### Misc variables
-variable "tags" {
-  type        = map(any)
-  description = "Tags used for the resources created by this configuration"
-  default = {
-    # key1 = value
-    # key2 = value
-  }
+variable "default_tags" {
+  description = "A mapping of tags to assign to resources created by this configuration"
+  type        = map(string)
+  default     = {}
 }
 
 ### Account variables
